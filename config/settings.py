@@ -2,7 +2,7 @@ import yaml
 
 class Settings:
     def __init__(self, env="dev"):
-        with open("config/env.yaml") as f:
+        with open("config/env.yaml", encoding="utf-8") as f:
             data = yaml.safe_load(f)
         self.config = data[env]
 
