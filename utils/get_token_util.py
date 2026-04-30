@@ -12,9 +12,3 @@ def get_token():
     token = login_response.json()["token"]
     return token
 
-# 使用 token 访问 /auth/me
-# headers = {
-#     "Authorization": f"Bearer {token}"
-# }
-# me_response = requests.get("http://localhost:8000/auth/me", headers=headers)
-# print(me_response.json())

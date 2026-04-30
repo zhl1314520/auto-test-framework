@@ -14,11 +14,17 @@ def run_file(file):
 
 # 跑指定用例
 def run_case(file, name):
-    os.system("pytest " + file + "::" + name + " -v")
+    os.system("pytest " + file + "::" + name + " -v" + " -s")
 
 if __name__ == "__main__":
-    # run_case("tests/api/test_user.py", "test_login")
+    # run_case("tests/api/test_auth.py", "test_login")
 
-    # run_case("tests/api/test_user.py", "test_get_current_user_info")
+    # run_case("tests/api/test_auth.py", "test_get_current_user_info")
 
-    run_case("tests/api/test_user.py", "test_get_current_user_info")
+    # run_case("tests/api/test_user.py", "test_create_user")
+
+    # run_case("tests/api/test_user.py", "test_user_list")
+
+    # run_case("tests/api/test_user.py", "test_delete_user_by_id")
+
+    run_case("tests/api/test_user.py", "test_update_user_info")
