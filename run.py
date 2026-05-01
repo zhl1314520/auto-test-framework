@@ -17,6 +17,7 @@ def run_case(file, name):
     os.system("pytest " + file + "::" + name + " -v" + " -s")
 
 if __name__ == "__main__":
+    """ API """
     # run_case("tests/api/test_auth.py", "test_login")
 
     # run_case("tests/api/test_auth.py", "test_get_current_user_info")
@@ -27,4 +28,14 @@ if __name__ == "__main__":
 
     # run_case("tests/api/test_user.py", "test_delete_user_by_id")
 
-    run_case("tests/api/test_user.py", "test_update_user_info")
+    # run_case("tests/api/test_user.py", "test_update_user_info")
+
+
+    """ UI """
+    # run_case("tests/ui/test_login.py", "test_login")
+
+    # run_case("tests/ui/test_project.py", "test_project_input")
+
+    # run_case("tests/ui/test_project.py", "test_project_scroll")
+
+    run_case("tests/ui/test_testcase.py", "test_select_list")

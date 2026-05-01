@@ -3,6 +3,7 @@ from core.driver_manager import DriverManager
 from api.auth_api import AuthAPI
 from utils.get_token_util import get_token
 from api.user_api import UserAPI
+from pages.login_page import LoginPage
 
 # ======
 # 全局 fixture
@@ -33,6 +34,16 @@ def pause(seconds=1):
 def auth_token():
     """全局 token，整个测试会话只获取一次"""
     return get_token()
+
+# =====================
+# 封装的登录 (防止别的页面操作被拦截)
+# =====================
+@pytest.fixture(scope="session")
+def general_login(driver):
+    page = LoginPage(driver)
+    page.open()
+    page.login("17201665342@163.com", "123456")
+    return page
 
 
 # 用户认证相关接口（带有 token）
