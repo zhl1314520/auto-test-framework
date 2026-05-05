@@ -30,6 +30,14 @@ if __name__ == "__main__":
 
     # run_case("tests/api/test_user.py", "test_update_user_info")
 
+    # run_case("tests/api/test_user.py", "test_get_user_detail")
+
+    # run_case("tests/api/test_user.py", "test_change_user_password")
+
+    # run_case("tests/api/test_forgetpsd.py", "test_send_verifycode")
+
+    run_case("tests/api/test_forgetpsd.py", "test_reset_password")
+
 
     """ UI """
     # run_case("tests/ui/test_login.py", "test_login")
@@ -38,4 +46,4 @@ if __name__ == "__main__":
 
     # run_case("tests/ui/test_project.py", "test_project_scroll")
 
-    run_case("tests/ui/test_testcase.py", "test_select_list")
+    # run_case("tests/ui/test_testcase.py", "test_select_list")

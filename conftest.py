@@ -1,4 +1,6 @@
 import pytest, time
+
+from api.forgetpsd_api import ForgetPsdAPI
 from core.driver_manager import DriverManager
 from api.auth_api import AuthAPI
 from utils.get_token_util import get_token
@@ -59,4 +61,11 @@ def auth_api_with_token(auth_token):
 def user_api(auth_token):
     api = UserAPI()
     api.token = auth_token
+    return api
+
+
+# 忘记密码相关接口
+@pytest.fixture
+def forget_password_api():
+    api = ForgetPsdAPI()
     return api

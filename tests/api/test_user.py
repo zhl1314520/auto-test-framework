@@ -38,3 +38,19 @@ def test_update_user_info(user_api, id, email, role, expected_status):
     result = user_api.update_user_info(id, email, role)
     assert result.status_code == expected_status
 
+
+@pytest.mark.parametrize("id, expected_status", [
+    (3, 200)
+])
+def test_get_user_detail(user_api, id, expected_status):
+    result = user_api.get_user_details(id)
+    assert result.status_code == expected_status
+
+
+@pytest.mark.parametrize("id, old_password, new_password, expected_status", [
+    (3, "1234567", "123456", 200)
+])
+def test_change_user_password(user_api, id, old_password, new_password, expected_status):
+    result = user_api.change_user_password(id, old_password, new_password)
+    assert result.status_code == expected_status
+
