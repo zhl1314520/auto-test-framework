@@ -36,7 +36,13 @@ if __name__ == "__main__":
 
     # run_case("tests/api/test_forgetpsd.py", "test_send_verifycode")
 
-    run_case("tests/api/test_forgetpsd.py", "test_reset_password")
+    # run_case("tests/api/test_forgetpsd.py", "test_reset_password")
+
+    # run_case("tests/api/test_project.py", "test_create_project")
+
+    # run_case("tests/api/test_project.py", "test_get_project_list")
+
+    run_case("tests/api/test_project.py", "test_delete_project_by_id")
 
 
     """ UI """

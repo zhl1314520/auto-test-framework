@@ -6,6 +6,7 @@ from api.auth_api import AuthAPI
 from utils.get_token_util import get_token
 from api.user_api import UserAPI
 from pages.login_page import LoginPage
+from api.project_api import ProjectAPI
 
 # ======
 # 全局 fixture
@@ -68,4 +69,11 @@ def user_api(auth_token):
 @pytest.fixture
 def forget_password_api():
     api = ForgetPsdAPI()
+    return api
+
+
+# 项目管理相关接口
+@pytest.fixture
+def project_api():
+    api = ProjectAPI()
     return api

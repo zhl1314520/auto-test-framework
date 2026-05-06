@@ -1,9 +1,6 @@
 {
   "enabledPlugins": {
-    "example-skills@anthropic-agent-skills": true,
-    "superpowers@superpowers-marketplace": true,
-    "ui-ux-pro-max@ui-ux-pro-max-skill": true,
-    "andrej-karpathy-skills@karpathy-skills": true,
-    "find-skills@user": true
+    "find-skills@user": true,
+    "superpowers@superpowers-marketplace": true
   }
 }
