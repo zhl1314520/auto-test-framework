@@ -46,7 +46,11 @@ if __name__ == "__main__":
 
     # run_case("tests/api/test_project.py", "test_update_project_by_id")
 
-    run_case("tests/api/test_project.py", "test_add_project_member")
+    # run_case("tests/api/test_project.py", "test_add_project_member")
+
+    # run_case("tests/api/test_project.py", "test_get_project_member_list")
+
+    run_case("tests/api/test_project.py", "test_delete_project_member_by_member_id")
 
 
     """ UI """

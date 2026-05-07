@@ -45,3 +45,19 @@ def test_add_project_member(project_api, id, project_id, user_id, role, expected
     result = project_api.add_project_member(id, project_id, user_id, role)
     assert result.status_code == expected_status
 
+
+@pytest.mark.parametrize("id, expected_status", [
+    (32, 200)
+])
+def test_get_project_member_list(project_api, id, expected_status):
+    result = project_api.get_project_member_list(id)
+    assert result.status_code == expected_status
+    print(json.dumps(result.json(), indent=2))
+
+
+@pytest.mark.parametrize("member_id, expected_status", [
+    (2, 200)
+])
+def test_delete_project_member_by_member_id(project_api, member_id, expected_status):
+    result = project_api.delete_project_member_by_member_id(member_id)
+    assert result.status_code == expected_status

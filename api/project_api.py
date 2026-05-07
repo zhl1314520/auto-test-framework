@@ -44,3 +44,13 @@ class ProjectAPI(BaseAPI):
             "role": role
         }
         return self.post(url, json=payload)
+
+    @allure.step("调用获取项目成员列表接口: {id}")
+    def get_project_member_list(self, id):
+        url = settings.config["base_url"] + "/projects/" + str(id) + "/members"
+        return self.get(url)
+
+    @allure.step("调用删除项目成员接口: {member_id}")
+    def delete_project_member_by_member_id(self, member_id):
+        url = settings.config["base_url"] + "/projects" + "/members/" + str(member_id)
+        return self.delete(url)
